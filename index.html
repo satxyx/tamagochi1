@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header id="header">
         <h1>Play With Pusheen</h1>
         <p id="p1">Congratulations! You have your very own Pusheen to take care of and love endlessly. 
@@ -19,13 +20,30 @@
             <h2>Keep your Pusheen alive!</h2>
             <p id="p2">Watch the health bars below to know when you need to feed, play, or put your Pusheen to sleep.
                 Don’t let any of the health bars turn red!</p>
+
+
+
             <media>
                 <img id="pusheen" src="cat_sad2.gif">
             </media>
 
 
+            <div class="round-time-bar" style="--duration: 10;">
+                <div></div>
+              </div>
 
+              <div class="round-time-bar2" style="--duration: 10;">
+                <div></div>
+              </div>
+
+              <div class="round-time-bar3" style="--duration: 10;">
+                <div></div>
+              </div>
+              
+              
+              <button id="restart-button">restart timers</button>
     </main>
+    <!-- add class="blink" to make buttons blink -->
     <button id="btn-feed">Feed</button>
     <button id="btn-play">Play</button>
     <button id="btn-lights">Turn Off Lights</button>

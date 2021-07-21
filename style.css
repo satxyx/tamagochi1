@@ -33,19 +33,15 @@ h1 {
     height: 72px;
     left: calc(50% - 506px/2 - 28px);
     top: 157px;
-    
     font-family: Raleway;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 140.62%;
-    /* or 24px */
-    
     display: flex;
     align-items: center;
     text-align: center;
     margin:10px;
-    
     color: #000000;
 }
 
@@ -60,7 +56,6 @@ h1 {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
     align-items: center;
     text-align: center;
     color: #000000;
@@ -68,7 +63,6 @@ h1 {
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
-    
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
         
@@ -90,21 +84,15 @@ h2 {
     right: 67.15%;
     top: 23.83%;
     bottom: 71.33%;
-
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 140.62%;
-    /* identical to box height, or 28px */
-    
-    
     color: #694F3B;
 }
 
 #p2 {
-    /* Subtitle */
-
 
     position: absolute;
     left: 16.32%;
@@ -116,9 +104,6 @@ h2 {
     font-weight: 300;
     font-size: 17px;
     line-height: 140.62%;
-    /* or 24px */
-
-
     color: #000000;
 }
 
@@ -158,12 +143,11 @@ img {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    background: #694F3B;
+    background: linear-gradient(to bottom, rgb(255, 115, 227), rgb(130, 0, 104));
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
-    
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -179,11 +163,11 @@ img {
     font-size: 18px;
     line-height: 21px;
     background: #694F3B;
+    background: linear-gradient(to bottom, rgb(141, 231, 230), rgb(0, 153, 150));
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
-
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 
@@ -200,11 +184,180 @@ img {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    background: #694F3B;
+    background: linear-gradient(to bottom, rgb(222, 132, 255), rgb(105, 0, 140));
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.round-time-bar3 {
+
+    position: absolute;
+    left: 16.11%;
+    right: 54.38%;
+    top: 70.83%;
+    
+    }
+    
+    .round-time-bar3 {
+        margin: 1rem;
+        overflow: hidden;
+      }
+      .round-time-bar3 div {
+        height: 20px;
+        animation: roundtime calc(var(--duration) * 3s) steps(var(--duration))
+          forwards;
+        transform-origin: left center;
+        background: linear-gradient(to bottom, rgb(222, 132, 255), rgb(105, 0, 140));
+    }
+      
+      .round-time-bar3[data-style="smooth"] div {
+        animation: roundtime calc(var(--duration) * 3s) linear forwards;
+      }
+      
+      .round-time-bar3[data-style="fixed"] div {
+        width: calc(var(--duration) * 5%);
+      }
+      
+
+      }
+      
+      @keyframes roundtime {
+        to {
+          /* More performant than `width` */
+          transform: scaleX(0);
+        }
+      }
+
+.round-time-bar {
+
+position: absolute;
+left: 16.11%;
+right: 54.38%;
+top: 50.83%;
+
+}
+
+.round-time-bar {
+    margin: 1rem;
+    overflow: hidden;
+  }
+  .round-time-bar div {
+    height: 20px;
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+      forwards;
+    transform-origin: left center;
+    background: linear-gradient(to bottom, rgb(255, 0, 204), rgb(130, 0, 104));
+  }
+  
+  .round-time-bar[data-style="smooth"] div {
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+  }
+  
+  .round-time-bar[data-style="fixed"] div {
+    width: calc(var(--duration) * 5%);
+  }
+  
+  .round-time-bar[data-color="blue"] div {
+    background: linear-gradient(to bottom, #64b5f6, #1565c0);
+  }
+  
+  @keyframes roundtime {
+    to {
+      /* More performant than `width` */
+      transform: scaleX(0);
+    }
+  }
+
+  .round-time-bar2 {
+
+    position: absolute;
+    left: 16.11%;
+    right: 54.38%;
+    top: 60.83%;
+    
+    }
+    
+    .round-time-bar2 {
+        margin: 1rem;
+        overflow: hidden;
+      }
+      .round-time-bar2 div {
+        height: 20px;
+        animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+          forwards;
+        transform-origin: left center;
+        background: linear-gradient(to bottom, rgb(146, 83, 167), rgb(105, 0, 140));
+      }
+      
+      .round-time-bar2[data-style="smooth"] div {
+        animation: roundtime calc(var(--duration) * 1s) linear forwards;
+      }
+      
+      .round-time-bar2[data-style="fixed"] div {
+        width: calc(var(--duration) * 5%);
+      }
+      
+
+      
+      @keyframes roundtime {
+        to {
+          /* More performant than `width` */
+          transform: scaleX(0);
+        }
+      }
+
+      
+.round-time-bar2 {
+
+    position: absolute;
+    left: 16.11%;
+    right: 54.38%;
+    top: 60.83%;
+    
+    }
+    
+    .round-time-bar2 {
+        margin: 1rem;
+        overflow: hidden;
+      }
+      .round-time-bar2 div {
+        height: 20px;
+        animation: roundtime calc(var(--duration) * 2s) steps(var(--duration))
+          forwards;
+        transform-origin: left center;
+        background: linear-gradient(to bottom, rgb(122, 255, 253), rgb(0, 153, 150));
+      }
+      
+      .round-time-bar2[data-style="smooth"] div {
+        animation: roundtime calc(var(--duration) * 2s) linear forwards;
+      }
+
+
+      
+      @keyframes roundtime {
+        to {
+          /* More performant than `width` */
+          transform: scaleX(0);
+        }
+      }
+
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
 }
