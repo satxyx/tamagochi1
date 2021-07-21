@@ -16,7 +16,6 @@ let sleepCount = 0
 let sleepInterval = null
 
 
-
 ///// CHANGE IMAGES BY BUTTON CLICK
 const feedEl = document.getElementById('btn-feed')
 const playEl = document.getElementById('btn-play') 
