@@ -31,6 +31,17 @@ const ageEl = document.getElementById('h2')
 let ageCount = 0
 let ageInterval = null
 
+/// unhides health bars on start button click
+function unhideBars() {
+    // document.getElementById('hide').style.cssText = 'visibility:visible';
+    document.getElementById('hide').style.visibility = 'visible';
+    document.getElementById('hide2').style.visibility = 'visible';
+    document.getElementById('hide3').style.visibility = 'visible';
+
+}
+
+// function unhideBars() {
+    // document.getElementById('bb').style.visibility = 'visible';
 
 function ageCounter () {
     ageInterval = setInterval(function() {
@@ -52,6 +63,9 @@ startEl.addEventListener("click", ageCounter)
   ////////////// STARTS FEED FUNCTION ON START CLICK
   startEl.addEventListener("click", () => {
     bars.forEach((bar) => {
+
+        //// unhides the health bars
+
         clearInterval(feedInterval) 
 
         var buttonFlash = document.getElementById('btn-feed')
@@ -91,6 +105,9 @@ startEl.addEventListener("click", ageCounter)
     ////////////// STARTS PLAY FUNCTION ON START CLICK
     startEl.addEventListener("click", () => {
         bars2.forEach((bar) => {
+
+            //// unhides the health bars
+
             clearInterval(playInterval)
             
             var buttonFlash = document.getElementById('btn-play')
@@ -128,6 +145,9 @@ startEl.addEventListener("click", ageCounter)
         ////////////// STARTS SLEEP FUNCTION ON START CLICK
         startEl.addEventListener("click", () => {
             bars3.forEach((bar) => {
+
+                //// unhides the health bars
+
                 //defines and clears button flash
                 var buttonFlash = document.getElementById('btn-lights')
                 buttonFlash.classList.remove("blink")
@@ -332,5 +352,3 @@ bars3.forEach((bar) => {
   bar.classList.add("round-time-bar3");
 });
 });
-
-

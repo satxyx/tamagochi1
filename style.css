@@ -370,3 +370,17 @@ left: 353px;
 top: 550px;
 
 }
+
+/* hides the health bars */
+
+#hide {
+  visibility: hidden;
+}
+
+#hide2 {
+  visibility: hidden;
+}
+
+#hide3 {
+  visibility: hidden;
+}
