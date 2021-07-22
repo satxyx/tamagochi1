@@ -21,6 +21,19 @@ const lightsEl = document.getElementById('btn-lights')
 const startEl = document.getElementById('btn-start')
 const ageEl = document.getElementById('h2')
 
+/////////////// CAT CLASS
+class Cat {
+    constructor() {
+        this.feedCount = 0
+        this.playCount = 0
+        this.sleepCount = 0
+        this.ageCount = 0
+    }
+}
+
+//create instance
+const myCat = new Cat()
+
 // startEl.addEventListener("click", unhideBars)
 
 // function unhideBars () {
@@ -30,6 +43,12 @@ const ageEl = document.getElementById('h2')
 //////////////// ADD AGE
 let ageCount = 0
 let ageInterval = null
+
+
+// function feedCat() {
+//     myCat.feedCount--
+//     updateProgressBar('hunger', myCat.feedCount)
+// }
 
 /// unhides health bars on start button click
 function unhideBars() {
@@ -45,23 +64,22 @@ function unhideBars() {
 
 function ageCounter () {
     ageInterval = setInterval(function() {
+        myCat.ageCount++
         ageCount++
         ageEl.textContent = 'Keep your Pusheen alive! Pusheen is: ' + ageCount + ' years old'
 
     /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
 
     }, 1000)
-
 }
 
 startEl.addEventListener("click", ageCounter)
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////// SETS TIMERS ON START BUTTON
-//////////// NEED TO REFACTOR THIS CODE BECAUSE IT IS LONG, REPETETIVE AND PROBABLY UNNECESSARY
+function updateDOM() {
 
-  ////////////// STARTS FEED FUNCTION ON START CLICK
-  startEl.addEventListener("click", () => {
+}
+
+function setupFeedButton () {
     bars.forEach((bar) => {
 
         //// unhides the health bars
@@ -99,6 +117,52 @@ startEl.addEventListener("click", ageCounter)
       bar.offsetWidth;
       bar.classList.add("round-time-bar");
     });
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////// SETS TIMERS ON START BUTTON
+//////////// NEED TO REFACTOR THIS CODE BECAUSE IT IS LONG, REPETETIVE AND PROBABLY UNNECESSARY
+
+  ////////////// STARTS FEED FUNCTION ON START CLICK
+  startEl.addEventListener("click", () => {
+      setupFeedButton()
+    // bars.forEach((bar) => {
+
+    //     //// unhides the health bars
+
+    //     clearInterval(feedInterval) 
+
+    //     var buttonFlash = document.getElementById('btn-feed')
+    //     buttonFlash.classList.remove("blink")
+
+    //     feedCount = 0
+    //     feedInterval = setInterval(function() {
+    //         //increasing the count
+    //         feedCount++
+    //         feedEl.textContent ='Feed: ' + feedCount + '/10'
+
+    //     //dead pusheen
+    //     if(feedCount > 8) {
+    //         //if feedCount is greater than 6, add blink class to button
+    //         buttonFlash.classList.add("blink")
+    //         //add button flash class
+    //     }        
+
+    //     //dead pusheen
+    //     if(feedCount === 10) {
+    //         var image = document.getElementById('pusheen')
+    //         // if (image.src.match("cat_sad2.gif")) {
+    //         image.src = "cat_sleepy2.gif";
+    //         clearInterval(feedInterval) 
+    //         feedCount = 0
+    //     }
+
+    
+    //     }, 1000)  
+    //   bar.classList.remove("round-time-bar");
+    //   bar.offsetWidth;
+    //   bar.classList.add("round-time-bar");
+    // });
 
   });
 
@@ -352,3 +416,4 @@ bars3.forEach((bar) => {
   bar.classList.add("round-time-bar3");
 });
 });
+
