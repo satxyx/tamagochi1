@@ -5,12 +5,10 @@ const bars = document.querySelectorAll(".round-time-bar")
 let feedCount = 0
 let feedInterval = null
 
-const button2 = document.querySelector("#restart-button2");
 const bars2 = document.querySelectorAll(".round-time-bar2")
 let playCount = 0
 let playInterval = null
 
-const button3 = document.querySelector("#restart-button3");
 const bars3 = document.querySelectorAll(".round-time-bar3");
 let sleepCount = 0
 let sleepInterval = null
@@ -21,24 +19,34 @@ const feedEl = document.getElementById('btn-feed')
 const playEl = document.getElementById('btn-play') 
 const lightsEl = document.getElementById('btn-lights') 
 const startEl = document.getElementById('btn-start')
+const ageEl = document.getElementById('h2')
 
-// startEl.addEventListener("click", () => {
-//     bars.forEach((bar) => {
-//       bar.classList.remove("round-time-bar");
-//       bar.offsetWidth;
-//       bar.classList.add("round-time-bar");
-//       bar.classList.remove("round-time-bar2");
-//       bar.offsetWidth;
-//       bar.classList.add("round-time-bar2");
-//       bar.classList.remove("round-time-bar3");
-//       bar.offsetWidth;
-//       bar.classList.add("round-time-bar3");
-//     });
-//   });
-  
+// startEl.addEventListener("click", unhideBars)
 
+// function unhideBars () {
+
+// }
+
+//////////////// ADD AGE
+let ageCount = 0
+let ageInterval = null
+
+
+function ageCounter () {
+    ageInterval = setInterval(function() {
+        ageCount++
+        ageEl.textContent = 'Keep your Pusheen alive! Pusheen is: ' + ageCount + ' years old'
+
+    /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
+
+    }, 1000)
+
+}
+
+startEl.addEventListener("click", ageCounter)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////// SETS TIMERS ON START BUTTON
-///////////////////////////////////// STARTS ALL TIMERS ON INITIAL START CLICK
 //////////// NEED TO REFACTOR THIS CODE BECAUSE IT IS LONG, REPETETIVE AND PROBABLY UNNECESSARY
 
   ////////////// STARTS FEED FUNCTION ON START CLICK
@@ -53,8 +61,6 @@ const startEl = document.getElementById('btn-start')
         feedInterval = setInterval(function() {
             //increasing the count
             feedCount++
-
-            console.log('Feed Count:' + feedCount)
             feedEl.textContent ='Feed: ' + feedCount + '/10'
 
         //dead pusheen
@@ -95,7 +101,6 @@ const startEl = document.getElementById('btn-start')
                 //increasing the count
                 playCount++
         
-                console.log('Play Count:' + playCount)
                 playEl.textContent ='Play: ' + playCount + '/10'
         
                 if(playCount > 8) {
@@ -134,7 +139,6 @@ const startEl = document.getElementById('btn-start')
                     //increasing the count
                     sleepCount++
             
-                    console.log('Sleep Count:' + sleepCount)
                     lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
                     
                     if(sleepCount > 8) {
@@ -159,7 +163,7 @@ const startEl = document.getElementById('btn-start')
             });
             });
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////// CHANGES FOOD GIF
 function handleFeedClickPic() {
@@ -192,7 +196,7 @@ feedEl.addEventListener("click", () => {
             //increasing the count
             feedCount++
 
-            console.log('Feed Count:' + feedCount)
+            // console.log('Feed Count:' + feedCount)
             feedEl.textContent ='Feed: ' + feedCount + '/10'
 
         //dead pusheen
@@ -250,7 +254,7 @@ bars2.forEach((bar) => {
         //increasing the count
         playCount++
 
-        console.log('Play Count:' + playCount)
+        // console.log('Play Count:' + playCount)
         playEl.textContent ='Play: ' + playCount + '/10'
 
         if(playCount > 8) {
@@ -304,7 +308,7 @@ bars3.forEach((bar) => {
         //increasing the count
         sleepCount++
 
-        console.log('Sleep Count:' + sleepCount)
+        // console.log('Sleep Count:' + sleepCount)
         lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
         
         if(sleepCount > 8) {
