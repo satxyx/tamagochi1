@@ -348,3 +348,23 @@ top: 550px;
 #hide3 {
   visibility: hidden;
 }
+
+#age {
+position: absolute;
+width: 787px;
+height: 57px;
+left: calc(50% - 700px/2 + 269px);
+top: -30px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 56px;
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #694F3B;
+}

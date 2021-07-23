@@ -8,7 +8,7 @@ const feedEl = document.getElementById('btn-feed')
 const playEl = document.getElementById('btn-play') 
 const lightsEl = document.getElementById('btn-lights') 
 const startEl = document.getElementById('btn-start')
-const ageEl = document.getElementById('h2')
+const ageEl = document.getElementById('age')
 
 
 ////// GLOBAL VARIABLES
@@ -46,7 +46,7 @@ function ageCounter () {
     ageInterval = setInterval(function() {
         myCat.ageCount++
         ageCount++
-        ageEl.textContent = 'Keep your Pusheen alive! Pusheen is: ' + ageCount + ' years old'
+        ageEl.textContent = + ageCount + ' years old'
     /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
     }, 1000)
 }
