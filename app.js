@@ -79,7 +79,11 @@ function setupFeedButton () {
             // if (image.src.match("cat_sad2.gif")) {
             image.src = "cat_sleepy2.gif";
             clearInterval(feedInterval) 
+            clearInterval(ageInterval) 
             feedCount = 0
+            ageCount = 0
+            ageEl.textContent = 'dead :('
+
         }
         }, 1000)  
       bar.classList.remove("feed-bar");
@@ -106,6 +110,10 @@ function setupPlayButton () {
                 image.src = "cat_sleepy2.gif";
                 clearInterval(playInterval) 
                 playCount = 0
+                clearInterval(ageInterval) 
+                feedCount = 0
+                ageCount = 0
+                ageEl.textContent = 'dead :('
             }
     
         }, 1000)  
@@ -134,6 +142,10 @@ bars3.forEach((bar) => {
                 image.src = "cat_sleepy2.gif";
                 clearInterval(sleepInterval) 
                 sleepCount = 0
+                clearInterval(ageInterval) 
+                feedCount = 0
+                ageCount = 0
+                ageEl.textContent = 'dead :('
         }
     }, 2000)    
     
