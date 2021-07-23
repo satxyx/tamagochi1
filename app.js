@@ -1,5 +1,5 @@
 
-///// DOM SELECTORS
+///// DOM SELECTORS & GLOBAL VARIABLES
 const button = document.querySelector("#restart-button").style.visibility='hidden'
 const bars = document.querySelectorAll(".round-time-bar")
 const bars2 = document.querySelectorAll(".round-time-bar2")
@@ -31,19 +31,15 @@ class Cat {
         this.ageCount = 0
     }
 }
-
-//create instance
 const myCat = new Cat()
 
-
+///////////////////////////////////////////////////////
 ////// FUNCTIONS
-/// unhides health bars on start button click
 function unhideBars() {
     // document.getElementById('hide').style.cssText = 'visibility:visible';
     document.getElementById('hide').style.visibility = 'visible';
     document.getElementById('hide2').style.visibility = 'visible';
     document.getElementById('hide3').style.visibility = 'visible';
-
 }
 
 function ageCounter () {
@@ -53,13 +49,9 @@ function ageCounter () {
         ageEl.textContent = 'Keep your Pusheen alive! Pusheen is: ' + ageCount + ' years old'
 
     /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
-
     }, 1000)
 }
 
-
-
-////// FUNCTIONS
 function updateDOM() {
 
 }
@@ -142,6 +134,7 @@ function setupPlayButton () {
       bar.classList.add("round-time-bar2");
     });
 }
+
 function setupSleepButton() {
 bars3.forEach((bar) => {
 
@@ -165,7 +158,6 @@ bars3.forEach((bar) => {
             buttonFlash.classList.add("blink")
             //add button flash class
         }        
-
         //dead pusheen
         if(sleepCount === 10) {
             var image = document.getElementById('pusheen')
@@ -182,195 +174,16 @@ bars3.forEach((bar) => {
 });
 }
 
-  startEl.addEventListener("click", () => {
-      setupFeedButton()
-      setupPlayButton()
-      setupSleepButton()
-    // bars.forEach((bar) => {
-
-    //     //// unhides the health bars
-
-    //     clearInterval(feedInterval) 
-
-    //     var buttonFlash = document.getElementById('btn-feed')
-    //     buttonFlash.classList.remove("blink")
-
-    //     feedCount = 0
-    //     feedInterval = setInterval(function() {
-    //         //increasing the count
-    //         feedCount++
-    //         feedEl.textContent ='Feed: ' + feedCount + '/10'
-
-    //     //dead pusheen
-    //     if(feedCount > 8) {
-    //         //if feedCount is greater than 6, add blink class to button
-    //         buttonFlash.classList.add("blink")
-    //         //add button flash class
-    //     }        
-
-    //     //dead pusheen
-    //     if(feedCount === 10) {
-    //         var image = document.getElementById('pusheen')
-    //         // if (image.src.match("cat_sad2.gif")) {
-    //         image.src = "cat_sleepy2.gif";
-    //         clearInterval(feedInterval) 
-    //         feedCount = 0
-    //     }
-
-    
-    //     }, 1000)  
-    //   bar.classList.remove("round-time-bar");
-    //   bar.offsetWidth;
-    //   bar.classList.add("round-time-bar");
-    // });
-
-  });
-
-    ////////////// STARTS PLAY FUNCTION ON START CLICK
-    // startEl.addEventListener("click", () => {
-    //     bars2.forEach((bar) => {
-
-    //         //// unhides the health bars
-
-    //         clearInterval(playInterval)
-            
-    //         var buttonFlash = document.getElementById('btn-play')
-    //         buttonFlash.classList.remove("blink")
-        
-    //         playCount = 0
-    //         playInterval = setInterval(function() {
-    //             //increasing the count
-    //             playCount++
-        
-    //             playEl.textContent ='Play: ' + playCount + '/10'
-        
-    //             if(playCount > 8) {
-    //                 //if feedCount is greater than 6, add blink class to button
-    //                 buttonFlash.classList.add("blink")
-    //                 //add button flash class
-    //             }        
-        
-    //             //dead pusheen
-    //             if(playCount === 10) {
-    //                 var image = document.getElementById('pusheen')
-    //                 // if (image.src.match("cat_sad2.gif")) {
-    //                 image.src = "cat_sleepy2.gif";
-    //                 clearInterval(playInterval) 
-    //                 playCount = 0
-    //             }
-        
-    //         }, 1000)  
-    //       bar.classList.remove("round-time-bar2");
-    //       bar.offsetWidth;
-    //       bar.classList.add("round-time-bar2");
-    //     });
-    //     });
-
-        // ////////////// STARTS SLEEP FUNCTION ON START CLICK
-        // startEl.addEventListener("click", () => {
-        //     bars3.forEach((bar) => {
-
-        //         //// unhides the health bars
-
-        //         //defines and clears button flash
-        //         var buttonFlash = document.getElementById('btn-lights')
-        //         buttonFlash.classList.remove("blink")
-            
-        //         //defines and clears interval
-        //         clearInterval(sleepInterval) 
-        //         sleepCount = 0
-        //         sleepInterval = setInterval(function() {
-        //             //increasing the count
-        //             sleepCount++
-            
-        //             lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
-                    
-        //             if(sleepCount > 8) {
-        //                 //if feedCount is greater than 6, add blink class to button
-        //                 buttonFlash.classList.add("blink")
-        //                 //add button flash class
-        //             }        
-            
-        //             //dead pusheen
-        //             if(sleepCount === 10) {
-        //                 var image = document.getElementById('pusheen')
-        //                 // if (image.src.match("cat_sad2.gif")) {
-        //                     image.src = "cat_sleepy2.gif";
-        //                     clearInterval(sleepInterval) 
-        //                     sleepCount = 0
-        //             }
-        //         }, 2000)    
-                
-        //       bar.classList.remove("round-time-bar3");
-        //       bar.offsetWidth;
-        //       bar.classList.add("round-time-bar3");
-        //     });
-        //     });
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-////// CHANGES FOOD GIF
 function handleFeedClickPic() {
-        console.log('Feed Button Click!')
-        var image = document.getElementById('pusheen')
-        // if (image.src.match("cat_sad2.gif")) {
-            image.src = "cat_food2.gif";
-        // }
-        // else {
-        //     image.src = "cat_dance.gif";
-        
-    }
+    console.log('Feed Button Click!')
+    var image = document.getElementById('pusheen')
+    // if (image.src.match("cat_sad2.gif")) {
+        image.src = "cat_food2.gif";
+    // }
+    // else {
+    //     image.src = "cat_dance.gif";
+}
 
-
-
-
-
-
-///// RESETS FOOD BAR & INTERVAL ON FEED BUTTON CLICK
-feedEl.addEventListener("click", () => {
-    bars.forEach((bar) => {
-        clearInterval(feedInterval) 
-
-        var buttonFlash = document.getElementById('btn-feed')
-        buttonFlash.classList.remove("blink")
-
-        feedCount = 0
-        feedInterval = setInterval(function() {
-            //increasing the count
-            feedCount++
-
-            // console.log('Feed Count:' + feedCount)
-            feedEl.textContent ='Feed: ' + feedCount + '/10'
-
-        //dead pusheen
-        if(feedCount > 8) {
-            //if feedCount is greater than 6, add blink class to button
-            buttonFlash.classList.add("blink")
-            //add button flash class
-        }        
-
-        //dead pusheen
-        if(feedCount === 10) {
-            var image = document.getElementById('pusheen')
-            // if (image.src.match("cat_sad2.gif")) {
-            image.src = "cat_sleepy2.gif";
-            clearInterval(feedInterval) 
-            feedCount = 0
-        }
-
-    
-        }, 1000)  
-      bar.classList.remove("round-time-bar");
-      bar.offsetWidth;
-      bar.classList.add("round-time-bar");
-    });
-
-  });
-
-
-
-
-////// CHANGES PLAY GIF
 function handlePlayClickPic() {
     console.log('Play Button Click!')
     var image = document.getElementById('pusheen')
@@ -382,48 +195,7 @@ function handlePlayClickPic() {
     // }
 }
 
-
-///// RESETS PLAY BAR ON PLAY BUTTON CLICK
-playEl.addEventListener("click", () => {
-bars2.forEach((bar) => {
-    clearInterval(playInterval)
-    
-    var buttonFlash = document.getElementById('btn-play')
-    buttonFlash.classList.remove("blink")
-
-    playCount = 0
-    playInterval = setInterval(function() {
-        //increasing the count
-        playCount++
-
-        // console.log('Play Count:' + playCount)
-        playEl.textContent ='Play: ' + playCount + '/10'
-
-        if(playCount > 8) {
-            //if feedCount is greater than 6, add blink class to button
-            buttonFlash.classList.add("blink")
-            //add button flash class
-        }        
-
-        //dead pusheen
-        if(playCount === 10) {
-            var image = document.getElementById('pusheen')
-            // if (image.src.match("cat_sad2.gif")) {
-            image.src = "cat_sleepy2.gif";
-            clearInterval(playInterval) 
-            playCount = 0
-        }
-
-    }, 1000)  
-  bar.classList.remove("round-time-bar2");
-  bar.offsetWidth;
-  bar.classList.add("round-time-bar2");
-});
-});
-
-
-////// CHANGES SLEEP GIF
-  function handleLightsClickPic() {
+function handleLightsClickPic() {
     console.log('Turn Off Lights Button Click!')
     var image = document.getElementById('pusheen')
     // if (image.src.match("cat_sad2.gif")) {
@@ -434,52 +206,27 @@ bars2.forEach((bar) => {
     // }
 }
 
-
-///// RESETS SLEEP BAR ON FEED BUTTON CLICK
-lightsEl.addEventListener("click", () => {
-bars3.forEach((bar) => {
-    //defines and clears button flash
-    var buttonFlash = document.getElementById('btn-lights')
-    buttonFlash.classList.remove("blink")
-
-    //defines and clears interval
-    clearInterval(sleepInterval) 
-    sleepCount = 0
-    sleepInterval = setInterval(function() {
-        //increasing the count
-        sleepCount++
-
-        // console.log('Sleep Count:' + sleepCount)
-        lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
-        
-        if(sleepCount > 8) {
-            //if feedCount is greater than 6, add blink class to button
-            buttonFlash.classList.add("blink")
-            //add button flash class
-        }        
-
-        //dead pusheen
-        if(sleepCount === 10) {
-            var image = document.getElementById('pusheen')
-            // if (image.src.match("cat_sad2.gif")) {
-                image.src = "cat_sleepy2.gif";
-                clearInterval(sleepInterval) 
-                sleepCount = 0
-        }
-    }, 2000)    
-    
-  bar.classList.remove("round-time-bar3");
-  bar.offsetWidth;
-  bar.classList.add("round-time-bar3");
-});
-});
-
-///// EVENT LISTENERS
-
+///////////////////////////////////////////////////////
+///////EVENT LISTENERS
 startEl.addEventListener("click", ageCounter)
 lightsEl.addEventListener('click', handleLightsClickPic)
 playEl.addEventListener('click', handlePlayClickPic)
 feedEl.addEventListener('click', handleFeedClickPic)
 
+startEl.addEventListener("click", () => {
+    setupFeedButton()
+    setupPlayButton()
+    setupSleepButton()
+  });
 
+feedEl.addEventListener("click", () => {
+    setupFeedButton()
+  });
 
+playEl.addEventListener("click", () => {
+    setupPlayButton()
+});
+
+lightsEl.addEventListener("click", () => {
+    setupSleepButton()
+});
