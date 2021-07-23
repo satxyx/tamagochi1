@@ -79,19 +79,19 @@ function setupFeedButton () {
         feedInterval = setInterval(function() {
             //increasing the count
             feedCount++
-            feedEl.textContent ='Feed: ' + feedCount + '/10'
+            // feedEl.textContent ='Feed: ' + feedCount + '/10'
 
         //dead pusheen
-        if(feedCount > 7) {
+        if(feedCount > 10) {
             //if feedCount is greater than 6, add blink class to button
             buttonFlash.classList.add("blink")
-            alertEl.textContent = 'FEED MEEEE'
+            alertEl.textContent = 'please FEED MEEEEEE'
 
             //add button flash class
         }        
 
         //dead pusheen
-        if(feedCount === 10) {
+        if(feedCount === 15) {
             var image = document.getElementById('pusheen')
             // if (image.src.match("cat_sad2.gif")) {
             image.src = "cat_sleepy2.gif";
@@ -122,7 +122,7 @@ function setupPlayButton () {
         playCount = 0
         playInterval = setInterval(function() {
             playCount++
-            playEl.textContent ='Play: ' + playCount + '/10'
+            // playEl.textContent ='Play: ' + playCount + '/10'
     
             if(playCount > 15) {
                 buttonFlash.classList.add("blink")
@@ -159,11 +159,11 @@ bars3.forEach((bar) => {
         sleepCount = 0
         sleepInterval = setInterval(function() {
         sleepCount++
-        lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
+        // lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
         
         if(sleepCount > 25) {
             buttonFlash.classList.add("blink")
-            alertEl.textContent = 'IM SLEEPY :('
+            alertEl.textContent = 'IM SLEEPY & its bright :('
 
         }        
         if(sleepCount === 30) {

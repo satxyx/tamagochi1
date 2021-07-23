@@ -251,14 +251,14 @@ top: 50.83%;
   }
   .feed-bar div {
     height: 20px;
-    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+    animation: roundtime calc(var(--duration) * 1.5s) steps(var(--duration))
       forwards;
     transform-origin: left center;
     background: linear-gradient(to bottom, rgb(255, 0, 204), rgb(130, 0, 104));
   }
   
   .feed-bar[data-style="smooth"] div {
-    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+    animation: roundtime calc(var(--duration) * 1.5s) linear forwards;
   }
   
   .feed-bar[data-style="fixed"] div {
