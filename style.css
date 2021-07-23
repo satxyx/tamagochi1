@@ -194,7 +194,7 @@ img {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.round-time-bar3 {
+.sleep-bar {
 
     position: absolute;
     left: 16.11%;
@@ -203,11 +203,11 @@ img {
     
     }
     
-    .round-time-bar3 {
+    .sleep-bar {
         margin: 1rem;
         overflow: hidden;
       }
-      .round-time-bar3 div {
+      .sleep-bar div {
         height: 20px;
         animation: roundtime calc(var(--duration) * 3s) steps(var(--duration))
           forwards;
@@ -215,16 +215,16 @@ img {
         background: linear-gradient(to bottom, rgb(222, 132, 255), rgb(105, 0, 140));
     }
       
-      .round-time-bar3[data-style="smooth"] div {
+      .sleep-bar[data-style="smooth"] div {
         animation: roundtime calc(var(--duration) * 3s) linear forwards;
       }
       
-      .round-time-bar3[data-style="fixed"] div {
+      .sleep-bar[data-style="fixed"] div {
         width: calc(var(--duration) * 5%);
       }
       
 
-      }
+      
       
       @keyframes roundtime {
         to {
@@ -233,7 +233,7 @@ img {
         }
       }
 
-.round-time-bar {
+.feed-bar {
 
 position: absolute;
 left: 16.11%;
@@ -242,11 +242,11 @@ top: 50.83%;
 
 }
 
-.round-time-bar {
+.feed-bar {
     margin: 1rem;
     overflow: hidden;
   }
-  .round-time-bar div {
+  .feed-bar div {
     height: 20px;
     animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
       forwards;
@@ -254,26 +254,28 @@ top: 50.83%;
     background: linear-gradient(to bottom, rgb(255, 0, 204), rgb(130, 0, 104));
   }
   
-  .round-time-bar[data-style="smooth"] div {
+  .feed-bar[data-style="smooth"] div {
     animation: roundtime calc(var(--duration) * 1s) linear forwards;
   }
   
-  .round-time-bar[data-style="fixed"] div {
+  .feed-bar[data-style="fixed"] div {
     width: calc(var(--duration) * 5%);
   }
   
-  .round-time-bar[data-color="blue"] div {
+  .feed-bar[data-color="blue"] div {
     background: linear-gradient(to bottom, #64b5f6, #1565c0);
   }
   
   @keyframes roundtime {
     to {
-      /* More performant than `width` */
       transform: scaleX(0);
     }
   }
 
-  .round-time-bar2 {
+  
+
+      
+.play-bar {
 
     position: absolute;
     left: 16.11%;
@@ -281,67 +283,27 @@ top: 50.83%;
     top: 60.83%;
     
     }
-    
-    .round-time-bar2 {
+
+    .play-bar {
         margin: 1rem;
         overflow: hidden;
       }
-      .round-time-bar2 div {
-        height: 20px;
-        animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
-          forwards;
-        transform-origin: left center;
-        background: linear-gradient(to bottom, rgb(146, 83, 167), rgb(105, 0, 140));
-      }
-      
-      .round-time-bar2[data-style="smooth"] div {
-        animation: roundtime calc(var(--duration) * 1s) linear forwards;
-      }
-      
-      .round-time-bar2[data-style="fixed"] div {
-        width: calc(var(--duration) * 5%);
-      }
-      
-
-      
-      @keyframes roundtime {
-        to {
-          /* More performant than `width` */
-          transform: scaleX(0);
-        }
-      }
-
-      
-.round-time-bar2 {
-
-    position: absolute;
-    left: 16.11%;
-    right: 54.38%;
-    top: 60.83%;
-    
-    }
-    
-    .round-time-bar2 {
-        margin: 1rem;
-        overflow: hidden;
-      }
-      .round-time-bar2 div {
+      .play-bar div {
         height: 20px;
         animation: roundtime calc(var(--duration) * 2s) steps(var(--duration))
           forwards;
         transform-origin: left center;
         background: linear-gradient(to bottom, rgb(122, 255, 253), rgb(0, 153, 150));
-      }
+      } 
       
-      .round-time-bar2[data-style="smooth"] div {
+      .play-bar[data-style="smooth"] div {
         animation: roundtime calc(var(--duration) * 2s) linear forwards;
-      }
+      } 
 
 
       
       @keyframes roundtime {
         to {
-          /* More performant than `width` */
           transform: scaleX(0);
         }
       }

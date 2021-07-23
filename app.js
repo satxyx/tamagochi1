@@ -1,9 +1,9 @@
 
 ///// DOM SELECTORS & GLOBAL VARIABLES
 const button = document.querySelector("#restart-button").style.visibility='hidden'
-const bars = document.querySelectorAll(".round-time-bar")
-const bars2 = document.querySelectorAll(".round-time-bar2")
-const bars3 = document.querySelectorAll(".round-time-bar3");
+const bars = document.querySelectorAll(".feed-bar")
+const bars2 = document.querySelectorAll(".play-bar")
+const bars3 = document.querySelectorAll(".sleep-bar");
 const feedEl = document.getElementById('btn-feed')
 const playEl = document.getElementById('btn-play') 
 const lightsEl = document.getElementById('btn-lights') 
@@ -47,7 +47,6 @@ function ageCounter () {
         myCat.ageCount++
         ageCount++
         ageEl.textContent = 'Keep your Pusheen alive! Pusheen is: ' + ageCount + ' years old'
-
     /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
     }, 1000)
 }
@@ -83,9 +82,9 @@ function setupFeedButton () {
             feedCount = 0
         }
         }, 1000)  
-      bar.classList.remove("round-time-bar");
+      bar.classList.remove("feed-bar");
       bar.offsetWidth;
-      bar.classList.add("round-time-bar");
+      bar.classList.add("feed-bar");
     });
 }
 
@@ -110,9 +109,9 @@ function setupPlayButton () {
             }
     
         }, 1000)  
-      bar.classList.remove("round-time-bar2");
+      bar.classList.remove("play-bar");
       bar.offsetWidth;
-      bar.classList.add("round-time-bar2");
+      bar.classList.add("play-bar");
     });
 }
 
@@ -138,9 +137,9 @@ bars3.forEach((bar) => {
         }
     }, 2000)    
     
-  bar.classList.remove("round-time-bar3");
+  bar.classList.remove("sleep-bar");
   bar.offsetWidth;
-  bar.classList.add("round-time-bar3");
+  bar.classList.add("sleep-bar");
 });
 }
 
