@@ -54,9 +54,6 @@ function hideBars() {
     document.getElementById('btn-play').style.visibility = 'hidden';
     document.getElementById('btn-feed').style.visibility = 'hidden';
     document.getElementById('btn-lights').style.visibility = 'hidden';
-
-
-
 }
 
 function ageCounter () {
@@ -74,6 +71,7 @@ function updateDOM() {
 
 function setupFeedButton () {
     bars.forEach((bar) => {
+        alertEl.textContent = ' '
         clearInterval(feedInterval) 
         var buttonFlash = document.getElementById('btn-feed')
         buttonFlash.classList.remove("blink")
@@ -84,7 +82,7 @@ function setupFeedButton () {
             feedEl.textContent ='Feed: ' + feedCount + '/10'
 
         //dead pusheen
-        if(feedCount > 8) {
+        if(feedCount > 7) {
             //if feedCount is greater than 6, add blink class to button
             buttonFlash.classList.add("blink")
             alertEl.textContent = 'FEED MEEEE'
@@ -98,10 +96,13 @@ function setupFeedButton () {
             // if (image.src.match("cat_sad2.gif")) {
             image.src = "cat_sleepy2.gif";
             clearInterval(feedInterval) 
+            clearInterval(sleepInterval) 
+            clearInterval(playInterval) 
             clearInterval(ageInterval) 
-            feedCount = 0
-            ageCount = 0
+
+            feedCount, ageCount, playCount, sleepCount = 0
             ageEl.textContent = 'dead :('
+            alertEl.textContent = 'you killed me, you bastards'
             hideBars()
 
         }
@@ -114,6 +115,7 @@ function setupFeedButton () {
 
 function setupPlayButton () {
     bars2.forEach((bar) => {
+        alertEl.textContent = ' '
         clearInterval(playInterval)
         var buttonFlash = document.getElementById('btn-play')
         buttonFlash.classList.remove("blink")
@@ -122,12 +124,12 @@ function setupPlayButton () {
             playCount++
             playEl.textContent ='Play: ' + playCount + '/10'
     
-            if(playCount > 8) {
+            if(playCount > 15) {
                 buttonFlash.classList.add("blink")
                 alertEl.textContent = 'PLAY WITH MEEEE'
 
             }        
-            if(playCount === 10) {
+            if(playCount === 20) {
                 var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
                 clearInterval(playInterval) 
@@ -136,6 +138,8 @@ function setupPlayButton () {
                 feedCount = 0
                 ageCount = 0
                 ageEl.textContent = 'dead :('
+                alertEl.textContent = 'you killed me, you bastards'
+                hideBars()
             }
     
         }, 1000)  
@@ -147,6 +151,7 @@ function setupPlayButton () {
 
 function setupSleepButton() {
 bars3.forEach((bar) => {
+    alertEl.textContent = ' '
     var buttonFlash = document.getElementById('btn-lights')
     buttonFlash.classList.remove("blink")
 
@@ -156,12 +161,12 @@ bars3.forEach((bar) => {
         sleepCount++
         lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
         
-        if(sleepCount > 14) {
+        if(sleepCount > 25) {
             buttonFlash.classList.add("blink")
             alertEl.textContent = 'IM SLEEPY :('
 
         }        
-        if(sleepCount === 18) {
+        if(sleepCount === 30) {
             var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
                 clearInterval(sleepInterval) 
@@ -170,8 +175,10 @@ bars3.forEach((bar) => {
                 feedCount = 0
                 ageCount = 0
                 ageEl.textContent = 'dead :('
+                alertEl.textContent = 'you killed me, you bastards'
+                hideBars()
         }
-    }, 2000)    
+    }, 1000)    
     
   bar.classList.remove("sleep-bar");
   bar.offsetWidth;
@@ -210,6 +217,8 @@ startEl.addEventListener("click", () => {
     setupFeedButton()
     setupPlayButton()
     setupSleepButton()
+    alertEl.textContent = ' '
+
   });
 
 feedEl.addEventListener("click", () => {

@@ -135,6 +135,7 @@ img {
 }
 
 #btn-feed {
+  visibility: hidden;
     position: absolute;
     width: 200px;
     height: 60px;
@@ -154,6 +155,7 @@ img {
 }
 
 #btn-play {
+  visibility: hidden;
     position: absolute;
     width: 200px;
     height: 60px;
@@ -176,6 +178,7 @@ img {
 }
 
 #btn-lights {
+  visibility: hidden;
     position: absolute;
     width: 200px;
     height: 60px;
@@ -371,9 +374,7 @@ color: #694F3B;
 
 #alert {
   position: absolute;
-  width: 787px;
-  height: 57px;
-  left: calc(50% - 700px/2 + 269px);
+  left: calc(50% - 900px/2);
   top: -100px;
   
   font-family: Raleway;
