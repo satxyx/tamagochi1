@@ -9,6 +9,8 @@ const playEl = document.getElementById('btn-play')
 const lightsEl = document.getElementById('btn-lights') 
 const startEl = document.getElementById('btn-start')
 const ageEl = document.getElementById('age')
+const alertEl = document.getElementById('alert')
+
 
 
 ////// GLOBAL VARIABLES
@@ -85,6 +87,8 @@ function setupFeedButton () {
         if(feedCount > 8) {
             //if feedCount is greater than 6, add blink class to button
             buttonFlash.classList.add("blink")
+            alertEl.textContent = 'FEED MEEEE'
+
             //add button flash class
         }        
 
@@ -120,6 +124,8 @@ function setupPlayButton () {
     
             if(playCount > 8) {
                 buttonFlash.classList.add("blink")
+                alertEl.textContent = 'PLAY WITH MEEEE'
+
             }        
             if(playCount === 10) {
                 var image = document.getElementById('pusheen')
@@ -150,10 +156,12 @@ bars3.forEach((bar) => {
         sleepCount++
         lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
         
-        if(sleepCount > 8) {
+        if(sleepCount > 14) {
             buttonFlash.classList.add("blink")
+            alertEl.textContent = 'IM SLEEPY :('
+
         }        
-        if(sleepCount === 10) {
+        if(sleepCount === 18) {
             var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
                 clearInterval(sleepInterval) 
