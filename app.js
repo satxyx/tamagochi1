@@ -40,6 +40,21 @@ function unhideBars() {
     document.getElementById('hide').style.visibility = 'visible';
     document.getElementById('hide2').style.visibility = 'visible';
     document.getElementById('hide3').style.visibility = 'visible';
+    document.getElementById('btn-play').style.visibility = 'visible';
+    document.getElementById('btn-feed').style.visibility = 'visible';
+    document.getElementById('btn-lights').style.visibility = 'visible';
+}
+
+function hideBars() {
+    document.getElementById('hide').style.visibility = 'hidden';
+    document.getElementById('hide2').style.visibility = 'hidden';
+    document.getElementById('hide3').style.visibility = 'hidden';
+    document.getElementById('btn-play').style.visibility = 'hidden';
+    document.getElementById('btn-feed').style.visibility = 'hidden';
+    document.getElementById('btn-lights').style.visibility = 'hidden';
+
+
+
 }
 
 function ageCounter () {
@@ -83,6 +98,7 @@ function setupFeedButton () {
             feedCount = 0
             ageCount = 0
             ageEl.textContent = 'dead :('
+            hideBars()
 
         }
         }, 1000)  
