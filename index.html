@@ -11,24 +11,32 @@
 <body>
 
     <header id="header">
-        <h1>Play With Pusheen!</h1>
+        <h1 id="name-cat">Play With Pusheen!</h1>
         <p id="p1">Congratulations! You have your very own Pusheen to take care of and love endlessly. 
         Press play to activate your new pet, and use the buttons below to help Pusheen grow healthy & strong.</p>
-        <button id="btn-start" id="restart-button" onclick="unhideBars()">Start</button>
+ 
+        <button id="btn-start" id="restart-button" onclick="unhideBars()">Start</button> 
+
+
+        <button onclick="nameCat()">Name Your Pusheen</button>
+        <p id="Tale"></p>  <!-- Result from TellTale() will be put here as innerHTML-->  
+    
 
     </header>
     <main>
             <h2 id="h2">Keep your Pusheen alive!</h2>
             <p id="p2">Watch the health bars below to know when you need to feed, play, or put your Pusheen to sleep.
                 Pusheen will live forever unless you neglect him >:(</p>
+                <!-- <button onclick="nameCat()">Name Your Pusheen</button> -->
+                <!-- <input type="text" autofocus> -->
 
 
 
             <media>
                 <h3 id="alert"> </h3>
-
                 <h3 id="age"> </h3>
                 <img id="pusheen" src="cat_sad2.gif">
+
             </media>
 
            
@@ -43,13 +51,16 @@
               <div class="sleep-bar" id="hide3" style="--duration: 10;">
                 <div></div>
               </div>
-              
+
+
               
               <button id="restart-button">restart timers</button>
     </main>
     <!-- add class="blink" to make buttons blink -->
     <button id="btn-feed">Feed</button>
     <button id="btn-play">Play</button>
+    <h4 id="cat-name">Name Pusheen:</h3><input id="name-input" type="text" autofocus>
+
     <button id="btn-lights">Turn Off Lights</button>
 </body>
 </html>

@@ -56,13 +56,18 @@ function hideBars() {
     document.getElementById('btn-lights').style.visibility = 'hidden';
 }
 
+function hideName() {
+document.getElementById('cat-name').style.visibility = 'hidden';
+document.getElementById('name-input').style.visibility = 'hidden';
+}
+
 function ageCounter () {
     ageInterval = setInterval(function() {
         myCat.ageCount++
         ageCount++
         ageEl.textContent = + ageCount + ' years old'
     /// need to add if feed/sleep/play count === 10, age is 0 & add textContent "pusheen is dead you IDIOT!"
-    }, 1000)
+    }, 5000)
 }
 
 function updateDOM() {
@@ -161,12 +166,12 @@ bars3.forEach((bar) => {
         sleepCount++
         // lightsEl.textContent ='Turn Off Lights: ' + sleepCount + '/10'
         
-        if(sleepCount > 25) {
+        if(sleepCount > 27) {
             buttonFlash.classList.add("blink")
             alertEl.textContent = 'IM SLEEPY & its bright :('
 
         }        
-        if(sleepCount === 30) {
+        if(sleepCount === 35) {
             var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
                 clearInterval(sleepInterval) 
@@ -206,6 +211,16 @@ function handleLightsClickPic() {
         image.src = "cat_sleep.gif";
 }
 
+
+document.getElementById("name-input").addEventListener("keyup", myFunction);
+function myFunction() {
+	var elementValue = document.getElementById("name-input").value;
+    document.getElementById("name-cat").innerHTML = 'Play With ' + elementValue;
+
+}
+
+
+
 ///////////////////////////////////////////////////////
 ///////EVENT LISTENERS
 startEl.addEventListener("click", ageCounter)
@@ -217,6 +232,7 @@ startEl.addEventListener("click", () => {
     setupFeedButton()
     setupPlayButton()
     setupSleepButton()
+    hideName()
     alertEl.textContent = ' '
 
   });
@@ -232,3 +248,4 @@ playEl.addEventListener("click", () => {
 lightsEl.addEventListener("click", () => {
     setupSleepButton()
 });
+
