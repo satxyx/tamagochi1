@@ -6,11 +6,14 @@
     height: 700px;
     left: 152px;
     top: -39px;
+
     
 }
 
 body {
   background-color: #3B0944;
+  width: 1200px;
+
 }
 
 
@@ -28,6 +31,8 @@ h1 {
     align-items: center;
     text-align: center;
     color: #F1BBD5;
+    margin-top: 10px;
+    margin-bottom: 1px;
 
     
 }
@@ -47,8 +52,9 @@ h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    margin:10px;
+    margin-top: -5px;
     color: white;
+
 }
 
 #btn-start {
@@ -70,9 +76,7 @@ h1 {
     border-radius: 5px;
     color:black;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-
-        
+    
 }
 
 main {
@@ -144,6 +148,8 @@ media {
     justify-content: center;
     justify-self: center;
     text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 img {

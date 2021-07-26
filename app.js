@@ -254,6 +254,7 @@ startEl.addEventListener("click", () => {
     setupSleepButton()
     hideName()
     alertEl.textContent = ' '
+    ageCount = 0
 
   });
 
