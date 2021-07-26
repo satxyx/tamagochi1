@@ -1,51 +1,19 @@
 # tamagochi1
-WIREFRAME:
-https://www.figma.com/file/RfzPrs9avJSzPMguVpgizD/Pusheen-Game?node-id=77%3A432
 
+#Wireframe:
+[wireframe] (wireframe.png)
 
-///////////////////
-AGE 
-(increases by 1 every minute)
+#URL
+[Play with Pusheen](https://xsatyax.github.io/tamagochi1/)
 
+#Explanation
+This project is a very simple virtual pet game app.
+The goal of this game is to keep your pet (Pusheen) alive.
 
-///////////////////
-HEALTH BARS
-
-HUNGER 
-[     0-10     ]
-//automatically increases by 1 every 3 seconds
-//1-3sec = green
-//4-6sec = yellow
-//7-10sec = red
-
-//at 6/10 -> cathunger.gif (3 sec)  - FEED button flashes (will flash until clicked, multiple buttons can be flashing)
-
-BOREDOM
-[     0-10     ]
-//automatically increases by 1 every 3 seconds
-//1-3sec = green
-//4-6sec = yellow
-//7-10sec = red
-
-at 6/10 -> catbored.gif (3 sec) - PLAY button flashes (will flash until clicked, multiple buttons can be flashing)
-
-SLEEPINESS
-[     0-10     ]
-//automatically increases by 1 every 3 seconds
-//1-3sec = green
-//4-6sec = yellow
-//7-10sec = red
-
-//at 6/10 -> catsleepy.gif (3 sec) - TURN OFF LIGHTS button flashes (will flash until clicked, multiple buttons can be flashing)
-
-///////////////////
-BUTTONS
-
-FEED					
-//click -> hunger bar goes down to 0 -> catfood.gif (3 sec) -> catnormal.gif
-
-PLAY
-//click -> boredom bar goes down to 0 -> catplay.gif (3 sec) -> catnormal.gif
-
-TURN OFF LIGHTS
-//click -> sleepiness bar goes down to 0 -> catsleep.gif (3 sec) -> catnormal.gif
+##The app has the following functionalities:
+*Ability to name your pet
+*Ability to feed, play with, and put your pet to sleep
+*Health bar features, displaying the time you have left to feed, play with, or put your pet to sleep before it dies.
+*Warning signs when your pet is low health, which include:
+    *Blinking buttons
+    *Relevant messages (i.e: "getting sleepy")
