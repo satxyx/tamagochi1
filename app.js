@@ -38,13 +38,15 @@ const myCat = new Cat()
 ///////////////////////////////////////////////////////
 ////// FUNCTIONS
 function unhideBars() {
-    // document.getElementById('hide').style.cssText = 'visibility:visible';
     document.getElementById('hide').style.visibility = 'visible';
     document.getElementById('hide2').style.visibility = 'visible';
     document.getElementById('hide3').style.visibility = 'visible';
     document.getElementById('btn-play').style.visibility = 'visible';
     document.getElementById('btn-feed').style.visibility = 'visible';
     document.getElementById('btn-lights').style.visibility = 'visible';
+    document.getElementById('p2').style.visibility = 'visible';
+    document.getElementById('h2').style.visibility = 'visible';
+
 }
 
 function hideBars() {
@@ -54,11 +56,16 @@ function hideBars() {
     document.getElementById('btn-play').style.visibility = 'hidden';
     document.getElementById('btn-feed').style.visibility = 'hidden';
     document.getElementById('btn-lights').style.visibility = 'hidden';
+    document.getElementById('p2').style.visibility = 'hidden';
+    document.getElementById('h2').style.visibility = 'hidden';
+
+
+
 }
 
 function hideName() {
-document.getElementById('cat-name').style.visibility = 'hidden';
-document.getElementById('name-input').style.visibility = 'hidden';
+    document.getElementById('cat-name').style.visibility = 'hidden';
+    document.getElementById('name-input').style.visibility = 'hidden';
 }
 
 function ageCounter () {
