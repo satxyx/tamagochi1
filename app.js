@@ -152,7 +152,7 @@ function setupPlayButton () {
                 clearInterval(ageInterval) 
                 feedCount = 0
                 ageCount = 0
-                ageEl.textContent = 'dead :('
+                ageEl.textContent = 'you killed him :('
                 alertEl.textContent = 'died of boredom'
                 hideBars()
             }
@@ -220,6 +220,8 @@ function handleLightsClickPic() {
     var image = document.getElementById('pusheen')
         image.src = "cat_sleep.gif";
 }
+
+var elementValue = document.getElementById("name-input").value;
 
 
 document.getElementById("name-input").addEventListener("keyup", myFunction);
