@@ -23,7 +23,7 @@ let sleepInterval = null
 let ageCount = 0
 let ageInterval = null
 
-
+  
 /////// CAT CLASS
 class Cat {
     constructor() {

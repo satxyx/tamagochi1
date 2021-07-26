@@ -9,6 +9,9 @@
     
 }
 
+body {
+  background-color: #3B0944;
+}
 
 
 h1 {
@@ -24,7 +27,7 @@ h1 {
     line-height: 56px;
     align-items: center;
     text-align: center;
-    color: #694F3B;
+    color: #F1BBD5;
 
     
 }
@@ -45,7 +48,7 @@ h1 {
     align-items: center;
     text-align: center;
     margin:10px;
-    color: #000000;
+    color: white;
 }
 
 #btn-start {
@@ -61,8 +64,8 @@ h1 {
     line-height: 21px;
     align-items: center;
     text-align: center;
-    color: #000000;
-    background: #F9F0E1;
+    color: black;
+    background: linear-gradient(to bottom, rgb(241, 187, 213), rgb(255, 122, 186));
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 5px;
@@ -87,12 +90,12 @@ main {
     right: 67.15%;
     top: 23.83%;
     bottom: 71.33%;
+    width: 400px;
     font-family: Raleway;
-    font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 140.62%;
-    color: #694F3B;
+    font-size: 30px;
+    /* line-height: 140.62%; */
+    color: #F1BBD5;
     visibility: hidden;
 
 }
@@ -109,7 +112,7 @@ main {
     font-weight: 300;
     font-size: 17px;
     line-height: 140.62%;
-    color: #000000;
+    color: white;
     visibility: hidden;
 
     
@@ -152,8 +155,8 @@ img {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    background: linear-gradient(to bottom, rgb(255, 115, 227), rgb(130, 0, 104));
-    border: 1px solid #000000;
+    background: linear-gradient(to bottom, rgb(187, 47, 166), rgb(95, 24, 84));
+    border: 1px solid #3B0944;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
@@ -173,8 +176,8 @@ img {
     font-size: 18px;
     line-height: 21px;
     background: #694F3B;
-    background: linear-gradient(to bottom, rgb(141, 231, 230), rgb(0, 153, 150));
-    border: 1px solid #000000;
+    background: linear-gradient(to bottom, rgb(161, 37, 89), rgb(73, 18, 65));
+    border: 1px solid #3B0944;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
@@ -195,8 +198,8 @@ img {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    background: linear-gradient(to bottom, rgb(222, 132, 255), rgb(105, 0, 140));
-    border: 1px solid #000000;
+    background: linear-gradient(to bottom, rgb(206, 47, 113), rgb(130, 0, 104));
+    border: 1px solid #3B0944;
     box-sizing: border-box;
     border-radius: 5px;
     color:white;
@@ -221,7 +224,7 @@ img {
         animation: roundtime calc(var(--duration) * 3.5s) steps(var(--duration))
           forwards;
         transform-origin: left center;
-        background: linear-gradient(to bottom, rgb(222, 132, 255), rgb(105, 0, 140));
+        background: linear-gradient(to bottom, rgb(206, 47, 113), rgb(130, 0, 104));
         border-radius: 5px;
 
     }
@@ -262,7 +265,7 @@ top: 50.83%;
     animation: roundtime calc(var(--duration) * 1.5s) steps(var(--duration))
       forwards;
     transform-origin: left center;
-    background: linear-gradient(to bottom, rgb(255, 0, 204), rgb(130, 0, 104));
+    background: linear-gradient(to bottom, rgb(187, 47, 166), rgb(95, 24, 84));
     border-radius: 5px;
 
   }
@@ -309,7 +312,7 @@ top: 50.83%;
         animation: roundtime calc(var(--duration) * 2s) steps(var(--duration))
           forwards;
         transform-origin: left center;
-        background: linear-gradient(to bottom, rgb(122, 255, 253), rgb(0, 153, 150));
+        background: linear-gradient(to bottom, rgb(161, 37, 89), rgb(73, 18, 65));
         border-radius: 5px;
 
       } 
@@ -384,7 +387,7 @@ display: flex;
 align-items: center;
 text-align: center;
 
-color: #694F3B;
+color: #3B0944;
 }
 
 #alert {
@@ -402,7 +405,7 @@ color: #694F3B;
   align-items: center;
   text-align: center;
   
-  color: #694F3B;
+  color: white;
   }
 
   #cat-name {
@@ -415,6 +418,7 @@ color: #694F3B;
     font-size: 30px;
     font-style: normal;
     text-align: center;
+    color:white;
 
   }
 
@@ -430,7 +434,7 @@ color: #694F3B;
     text-align: center;
     font-size: 18px;
     line-height: 21px;
-    background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(220, 220, 220));
+    background:  #F9F0E1;
     box-sizing: border-box;
     border-color: white;
     border-radius: 5px;
