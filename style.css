@@ -12,7 +12,10 @@
 
 body {
   background-color: #3B0944;
-  width: 1200px;
+  background: url(the-wide-sky.gif);
+  background-size: cover;
+  width: 1440px;
+  height: 1200px;
 
 }
 

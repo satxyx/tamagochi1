@@ -156,7 +156,7 @@ function setupPlayButton () {
                 ageCount = 0
                 playCount = 0
                 sleepCount = 0
-                ageEl.textContent = 'the eternam slumber...'
+                ageEl.textContent = 'eternal slumber...'
                 alertEl.textContent = 'died of boredom'
                 hideBars()
             }
