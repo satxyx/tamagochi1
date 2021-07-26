@@ -86,7 +86,7 @@ main {
     align-self: center;
     justify-content: center;
     justify-self: center;
-    text-align: center;
+    /* text-align: center; */
 }
 
 

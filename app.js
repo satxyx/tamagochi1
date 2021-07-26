@@ -116,7 +116,7 @@ function setupFeedButton () {
             ageCount = 0
             playCount = 0
             sleepCount = 0
-            ageEl.textContent = 'dead :('
+            ageEl.textContent = 'eternal slumber'
             alertEl.textContent = 'death by starvation'
             hideBars()
 
@@ -147,12 +147,16 @@ function setupPlayButton () {
             if(playCount === 20) {
                 var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
+                clearInterval(feedInterval) 
+                clearInterval(sleepInterval) 
                 clearInterval(playInterval) 
-                playCount = 0
                 clearInterval(ageInterval) 
+    
                 feedCount = 0
                 ageCount = 0
-                ageEl.textContent = 'you killed him :('
+                playCount = 0
+                sleepCount = 0
+                ageEl.textContent = 'the eternam slumber...'
                 alertEl.textContent = 'died of boredom'
                 hideBars()
             }
@@ -184,13 +188,17 @@ bars3.forEach((bar) => {
         if(sleepCount === 35) {
             var image = document.getElementById('pusheen')
                 image.src = "cat_sleepy2.gif";
+                clearInterval(feedInterval) 
                 clearInterval(sleepInterval) 
-                sleepCount = 0
+                clearInterval(playInterval) 
                 clearInterval(ageInterval) 
+    
                 feedCount = 0
                 ageCount = 0
-                ageEl.textContent = 'dead :('
-                alertEl.textContent = 'the eternal sleep'
+                playCount = 0
+                sleepCount = 0
+                ageEl.textContent = 'eternal slumber...'
+                alertEl.textContent = 'death by exhaustion'
                 hideBars()
         }
     }, 1000)    
