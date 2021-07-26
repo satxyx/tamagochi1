@@ -97,7 +97,7 @@ function setupFeedButton () {
         if(feedCount > 10) {
             //if feedCount is greater than 6, add blink class to button
             buttonFlash.classList.add("blink")
-            alertEl.textContent = 'please FEED MEEEEEE'
+            alertEl.textContent = 'do I smell pizza?'
 
             //add button flash class
         }        
@@ -112,9 +112,12 @@ function setupFeedButton () {
             clearInterval(playInterval) 
             clearInterval(ageInterval) 
 
-            feedCount, ageCount, playCount, sleepCount = 0
+            feedCount = 0
+            ageCount = 0
+            playCount = 0
+            sleepCount = 0
             ageEl.textContent = 'dead :('
-            alertEl.textContent = 'you killed me, you bastards'
+            alertEl.textContent = 'death by starvation'
             hideBars()
 
         }
@@ -138,7 +141,7 @@ function setupPlayButton () {
     
             if(playCount > 15) {
                 buttonFlash.classList.add("blink")
-                alertEl.textContent = 'PLAY WITH MEEEE'
+                alertEl.textContent = '*existential dread*'
 
             }        
             if(playCount === 20) {
@@ -150,7 +153,7 @@ function setupPlayButton () {
                 feedCount = 0
                 ageCount = 0
                 ageEl.textContent = 'dead :('
-                alertEl.textContent = 'you killed me, you bastards'
+                alertEl.textContent = 'died of boredom'
                 hideBars()
             }
     
@@ -175,7 +178,7 @@ bars3.forEach((bar) => {
         
         if(sleepCount > 27) {
             buttonFlash.classList.add("blink")
-            alertEl.textContent = 'IM SLEEPY & its bright :('
+            alertEl.textContent = 'its getting late...'
 
         }        
         if(sleepCount === 35) {
@@ -187,7 +190,7 @@ bars3.forEach((bar) => {
                 feedCount = 0
                 ageCount = 0
                 ageEl.textContent = 'dead :('
-                alertEl.textContent = 'you killed me, you bastards'
+                alertEl.textContent = 'the eternal sleep'
                 hideBars()
         }
     }, 1000)    
